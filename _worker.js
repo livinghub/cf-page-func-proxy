@@ -2,8 +2,8 @@ export default {
     async fetch(request, env) {
       let url = new URL(request.url);
       if (url.pathname.startsWith('/')) {
-        url.hostname=(env.HOSTNAME || "bing.com");
-        url.port=(env.PORT || "443");
+        url.hostname=(env.HOSTNAME || "qq707.duckdns.org");
+        url.port=(env.PORT || "12225");
         let new_request=new Request(url,request);
         return fetch(new_request);
       }
